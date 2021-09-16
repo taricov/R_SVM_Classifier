@@ -3,13 +3,13 @@
 library(e1071)
 
 #Load the training data:
-train <- read.table('F:\\Work\\MLprojects\\R\\SVM_Classification\\SVM_Training.csv', sep=',', header=T)
+train <- read.table('Your Full File Pathe Goes Here\\SVM_Training.csv', sep=',', header=T)
 
 #Training the SVM model:
 model <- svm(formula = Purchased ~ Income + Age, data=train, type='C-classification', kernel='linear')
   
 #Loading the test data:
-test <- read.table('F:\\Work\\MLprojects\\R\\SVM_Classification\\SVM_Test.csv', sep=',', header=T)
+test <- read.table('Your Full File Pathe Goes Here\SVM_Test.csv', sep=',', header=T)
 
 #Testing the model on the new data:
 predictions <- predict(model, newdata= test[-4])
