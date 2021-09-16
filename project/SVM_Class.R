@@ -3,7 +3,7 @@
 library(e1071)
 
 #Load the training data:
-train <- read.table('Your Full File Pathe Goes Here\\SVM_Training.csv', sep=',', header=T)
+train <- read.table('Your Full File Path Goes Here\\SVM_Training.csv', sep=',', header=T)
 
 #Training the SVM model:
 model <- svm(formula = Purchased ~ Income + Age, data=train, type='C-classification', kernel='linear')
