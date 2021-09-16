@@ -9,7 +9,7 @@ train <- read.table('Your Full File Path Goes Here\\SVM_Training.csv', sep=',', 
 model <- svm(formula = Purchased ~ Income + Age, data=train, type='C-classification', kernel='linear')
   
 #Loading the test data:
-test <- read.table('Your Full File Pathe Goes Here\SVM_Test.csv', sep=',', header=T)
+test <- read.table('Your Full File Path Goes Here\SVM_Test.csv', sep=',', header=T)
 
 #Testing the model on the new data:
 predictions <- predict(model, newdata= test[-4])
